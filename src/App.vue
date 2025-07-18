@@ -11,5 +11,5 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style lang="scss">
-
+ 
 </style>

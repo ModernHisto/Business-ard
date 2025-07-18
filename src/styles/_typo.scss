@@ -1,0 +1,88 @@
+@use "mixins";
+@use "variables";
+
+h1,
+.h1 {
+  //size 52px - (1440) и (360) - 30px
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 8.33vw;
+  line-height: 100%;
+  letter-spacing: -5%;
+
+  @include mixins.up(variables.$lg) {
+    font-size: 3.61vw;
+  }
+}
+
+.size {
+  &-1 {
+    //size 20px - (1440) и (360) - 16px
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.44vw;
+    line-height: 150%;
+
+    @include mixins.up(variables.$lg) {
+      font-size: 1.39vw;
+    }
+  }
+
+  .font {
+    &-inter {
+      font-family: "Inter";
+    }
+
+    &-playfair-display {
+      font-family: "Playfair Display";
+    }
+
+    &-anastasiascriptc {
+      font-family: "AnastasiaScriptC";
+    }
+
+    &-normal {
+      font-style: normal;
+    }
+  }
+
+  .weight {
+    &-100 {
+      font-weight: 100;
+    }
+
+    &-200 {
+      font-weight: 200;
+    }
+
+    &-300 {
+      font-weight: 300;
+    }
+
+    &-400 {
+      font-weight: 400;
+    }
+
+    &-500 {
+      font-weight: 500;
+    }
+
+    &-600 {
+      font-weight: 600;
+    }
+
+    &-700 {
+      font-weight: 700;
+    }
+
+    &-800 {
+      font-weight: 800;
+    }
+
+    &-900 {
+      font-weight: 900;
+    }
+  }
+}

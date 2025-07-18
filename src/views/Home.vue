@@ -1,10 +1,21 @@
 <script setup>
+
 </script>
 
 <template>
-  <h1>HOME</h1>
+  <section class="home">
+    <v-container>
+      <div class="qwe">
+        <h1>HOME</h1>
+      </div>
+    </v-container>
+  </section>
 </template>
 
 <style lang="scss">
-  h1 {color: red;}
+@use '@/styles/index' as *;
+
+.qwe {
+  background-color: $primary-color;
+}
 </style>

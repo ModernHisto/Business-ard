@@ -1,0 +1,24 @@
+@use './variables';
+@use './mixins';
+
+// Быстрое плавное появление, быстрое плавное скрытие - хорошо для роутинга страниц
+.route-enter-active,
+.route-leave-active {
+	transition: opacity 0.3s;
+}
+
+.route-enter,
+.route-leave-to {
+	opacity: 0;
+}
+
+/* Fade */
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}

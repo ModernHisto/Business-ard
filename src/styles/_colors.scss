@@ -1,0 +1,17 @@
+@use 'variables';
+
+.color {
+  &-black {
+    color: variables.$black;
+  }
+
+  &-white {
+    color: variables.$white;
+  }
+}
+
+.bg {
+  &-dark {
+    background-color: variables.$black;
+  }
+}

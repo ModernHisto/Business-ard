@@ -1,0 +1,32 @@
+
+/* Colors */
+$primary-color: #3498db;
+$black: #000000;
+$white: #ffffff;
+
+/* z-indexes */
+$z-index-bg: 0;
+$z-index-content: 1;
+$z-index-top: 2;
+
+/* fonts */
+$default-font-family: 'Inter';
+
+/* Media breakpoints */
+$xs: 0;
+$sm: 576px;
+$md: 1024px;
+$lg: 1440px;
+$xl: 1920px;
+$xxl: 2560px;
+
+/* header */
+$header-lg-height: 53px;
+//$header-xl-height: 4.17vw;
+
+
+/* Container */
+$container-max-width: 100%;
+$container-padding: 1.39vw;
+
+/* @use "mixins"; */

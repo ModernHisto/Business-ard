@@ -3,12 +3,26 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
+import vuetify from 'vite-plugin-vuetify';
 
 // https://vite.dev/config/
 export default defineConfig({
+   css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        additionalData: `@use "@/styles/index.scss" as *;`,
+      }
+    }
+  },
+  
   plugins: [
     vue(),
     svgLoader(),
+    vuetify({
+      autoImport: true, // Автоматически импортирует компоненты
+      styles: {configFile: 'src/styles/_vuetify-variables.scss'}
+    }),
   ],
   resolve: {
     alias: {
