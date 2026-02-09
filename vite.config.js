@@ -5,7 +5,6 @@ import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
 import vuetify from 'vite-plugin-vuetify';
 
-// https://vite.dev/config/
 export default defineConfig({
    css: {
     preprocessorOptions: {
@@ -20,7 +19,7 @@ export default defineConfig({
     vue(),
     svgLoader(),
     vuetify({
-      autoImport: true, // Автоматически импортирует компоненты
+      autoImport: true,
       styles: {configFile: 'src/styles/_vuetify-variables.scss'}
     }),
   ],
