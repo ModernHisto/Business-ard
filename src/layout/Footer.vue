@@ -1,6 +1,4 @@
 <script setup>
-import discordSvg from '@/assets/svg/contact/discord.vue';
-import githubSvg from '@/assets/svg/contact/github.vue';
 import googleSvg from '@/assets/svg/contact/google.vue';
 import telegramSvg from '@/assets/svg/contact/telegram.vue';
 import phoneSvg from '@/assets/svg/contact/phone.vue';
@@ -79,7 +77,7 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
 <style lang="scss">
 .footer {
   padding: 1.1rem 6rem;
-  background: linear-gradient(0deg,rgba(29, 29, 29, 0.493) 76%, rgba(29, 29, 29, 0.397) 100%);
+  background: linear-gradient(0deg, rgba(29, 29, 29, 0.493) 76%, rgba(29, 29, 29, 0.397) 100%);
   border-radius: 0rem !important;
   border-width: 1px 0 0 0 !important;
 
@@ -111,7 +109,7 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
     padding: 2rem 0;
     border-bottom: 1px solid $white1c;
 
-     @include down($sm) {
+    @include down($sm) {
       flex-direction: column;
       gap: 2rem;
     }
@@ -141,17 +139,18 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
     letter-spacing: 0.03rem;
   }
 
-  &__contact-value {}
+  /* &__contact-value {} */
 
   &__svg {
     width: 1.5rem;
     height: 1.5rem;
 
-    &--telegram,
+    /*   &--telegram,
     &--phone,
     &--google,
     &--github,
     &--discord {}
+    */
   }
 
   &__signature {

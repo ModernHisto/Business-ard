@@ -1,5 +1,5 @@
 <script setup>
-import preface from '@/components/reusable/preface.vue';
+import preface from '@/components/reusable/Preface.vue';
 import aboutTabs from '@/components/about/AboutTabs.vue';
 </script>
 
