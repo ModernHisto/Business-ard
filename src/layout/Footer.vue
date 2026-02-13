@@ -2,8 +2,6 @@
 import googleSvg from '@/assets/svg/contact/google.vue';
 import telegramSvg from '@/assets/svg/contact/telegram.vue';
 import phoneSvg from '@/assets/svg/contact/phone.vue';
-
-
 </script>
 
 <template>

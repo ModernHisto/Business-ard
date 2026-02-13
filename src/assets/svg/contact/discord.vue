@@ -61,7 +61,7 @@ const handleCopy = async (text) => {
 
 .notification {
   position: fixed;
-  top: 20px;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   

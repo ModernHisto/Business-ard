@@ -172,14 +172,13 @@ const handleContactClick = (contact) => {
 
   &__notification {
   position: fixed;
-  top: 20px;
+  top: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  
-  // Градиент как у меню
+
   background: linear-gradient(135deg,
     rgba(26, 26, 26, 0.98) 0%,
-    rgba(34, 34, 34, 0.95) 50%,
+    #3a3a3a,
     rgba(26, 26, 26, 0.98) 100%);
   
   color: $white;
@@ -190,7 +189,7 @@ const handleContactClick = (contact) => {
   z-index: 1001;
   animation: slideFromMenu 2s ease-in-out forwards;
   
-  // Стеклянный эффект усиливаем
+
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   
