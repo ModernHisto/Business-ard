@@ -6,6 +6,7 @@ import discordSvg from '@/assets/svg/contact/discord.vue';
 import githubSvg from '@/assets/svg/contact/github.vue';
 import googleSvg from '@/assets/svg/contact/google.vue';
 import telegramSvg from '@/assets/svg/contact/telegram.vue';
+import BacklightControl from '@/components/reusable/BacklightControl.vue';
 import router from '@/plugins/router/routes';
 
 
@@ -23,6 +24,8 @@ const toggleMenu = () => {
         <RouterLink to="/" class="header__logo-link"><v-img src="/logo.webp" :width="250" cover alt="logo"></v-img>
         </RouterLink>
       </div>
+
+      <BacklightControl />
 
       <nav class="header__nav no-select">
         <ul class="header__nav-list">
