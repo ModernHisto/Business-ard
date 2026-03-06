@@ -6,9 +6,7 @@ import discordSvg from '@/assets/svg/contact/discord.vue';
 import githubSvg from '@/assets/svg/contact/github.vue';
 import googleSvg from '@/assets/svg/contact/google.vue';
 import telegramSvg from '@/assets/svg/contact/telegram.vue';
-import BacklightControl from '@/components/reusable/BacklightControl.vue';
-import router from '@/plugins/router/routes';
-
+import headerLedge from '@/assets/svg/headerLedge.vue';
 
 const menuStore = useMenuStore();
 
@@ -18,14 +16,13 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="header glass-effect">
+  <header class="header">
     <div class="header__content">
+
       <div class="header__logo">
         <RouterLink to="/" class="header__logo-link"><v-img src="/logo.webp" :width="250" cover alt="logo"></v-img>
         </RouterLink>
       </div>
-
-      <BacklightControl />
 
       <nav class="header__nav no-select">
         <ul class="header__nav-list">
@@ -37,6 +34,11 @@ const toggleMenu = () => {
           <li class="header__nav-item">
             <RouterLink :to="{ name: 'about' }" class="header__nav-link">
               About Me
+            </RouterLink>
+          </li>
+          <li class="header__nav-item header__logo-item">
+            <RouterLink to="/" class="header__logo-link">
+              <v-img src="/logo.webp" :width="250" cover alt="logo"></v-img>
             </RouterLink>
           </li>
           <li class="header__nav-item">
@@ -108,23 +110,28 @@ const toggleMenu = () => {
         </div>
       </Transition>
     </div>
+
+    <headerLedge />
+
   </header>
 </template>
 
 <style lang="scss">
 .header {
   position: relative;
-  z-index: 1000;
-  border-radius: 0rem !important;
-  border-width: 0 0 1px 0 !important;
 
   &__content {
+    position: relative;
+    z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 4rem;
+    justify-content: center;
+    padding: 0.8rem 0;
     line-height: normal;
-    background: linear-gradient(0deg, rgba(29, 29, 29, 0.493) 76%, rgba(29, 29, 29, 0.397) 100%);
+    background: linear-gradient(0deg, rgba(28, 28, 28, 0.329) 76%, rgba(29, 29, 29, 0.396) 100%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
 
     @include up($xl) {
       padding: 0.8rem 6rem;
@@ -136,6 +143,7 @@ const toggleMenu = () => {
 
     @include down($lg) {
       padding: 0.6rem 3.1rem;
+      justify-content: space-between;
     }
 
     @include down($sm) {
@@ -143,9 +151,16 @@ const toggleMenu = () => {
     }
   }
 
+  &__logo {
+    @include up($lg) {
+      display: none;
+    }
+  }
+
   &__nav {
     display: block;
     font-size: 1.1rem;
+    margin-left: 3.2rem;
 
     @include down($lg) {
       display: none;
@@ -154,7 +169,7 @@ const toggleMenu = () => {
 
   &__nav-list {
     display: flex;
-    gap: px2vw(28, $lg);
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -162,6 +177,20 @@ const toggleMenu = () => {
 
   &__nav-item {
     position: relative;
+     padding: 0 2rem 0 2rem;
+  }
+
+  &__nav-item:first-child {
+    border-right: 1px solid $white1c;
+  }
+
+  &__nav-item:last-child {
+    border-left: 1px solid $white1c;
+  }
+
+  &__logo-item {
+    border-right: 1px solid $white1c;
+    border-left: 1px solid $white1c;
   }
 
   &__nav-link {
@@ -173,9 +202,10 @@ const toggleMenu = () => {
 
       &::after {
         content: '';
-        position: absolute;
+        position: relative;
+        display: block;
         bottom: -0.2rem;
-        left: 0;
+        left: 0rem;
         width: 100%;
         height: 2px;
         background-color: $green;
