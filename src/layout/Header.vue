@@ -109,10 +109,8 @@ const toggleMenu = () => {
           </div>
         </div>
       </Transition>
+      <headerLedge />
     </div>
-
-    <headerLedge />
-
   </header>
 </template>
 
@@ -126,16 +124,11 @@ const toggleMenu = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 0;
+    padding: 0.8rem 6rem;
     line-height: normal;
-    background: linear-gradient(0deg, rgba(28, 28, 28, 0.329) 76%, rgba(29, 29, 29, 0.396) 100%);
+    background-color: $main-components;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
-
-
-    @include up($xl) {
-      padding: 0.8rem 6rem;
-    }
 
     @include down($md) {
       padding: 0.6rem 3.1rem;
@@ -177,7 +170,7 @@ const toggleMenu = () => {
 
   &__nav-item {
     position: relative;
-     padding: 0 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
   }
 
   &__nav-item:first-child {
@@ -239,7 +232,7 @@ const toggleMenu = () => {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1000;
+    z-index: 1001;
     transform: translateZ(0);
     background: linear-gradient(135deg,
         #1a1a1a 0%,
@@ -338,9 +331,24 @@ const toggleMenu = () => {
     width: 2.5rem;
     height: 2.5rem;
   }
+
+  &::after {
+    content: "";
+    z-index: 999;
+    display: block;
+    position: absolute;
+    left: calc(50% - 6.593rem);
+    top: 97%;
+    width: 13.3rem;
+    height: 2.25rem;
+    clip-path: polygon(17% 0, 83% 0, 100% 103%, 0% 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    rotate: 180deg;
+  }
 }
 
-/* Анимация */
+/* ========== ANIMATIONS ========== */
 .slide-right-enter-active,
 .slide-right-leave-active {
   transition: all 0.4s ease;

@@ -1,15 +1,16 @@
 <script setup>
-import CleanCenter from '@/assets/svg/backlight_control/cleanCenter.vue';
-import DiagonalStripes from '@/assets/svg/backlight_control/diagonalStripes.vue';
-import SlidingStrips from '@/assets/svg/backlight_control/slidingStrips.vue';
+import btnBackgroundEdges from '@/assets/svg/backlight_control/btnBackgroundEdges.vue';
+import btnBackgroundLinear from '@/assets/svg/backlight_control/btnBackgroundLinear.vue';
+import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.vue';
 </script>
 
-<template> 
-<div class="backlight-control">
+<template>
+  <div class="backlight-control">
+    <div class="backlight-control__description">BACKGROUND PRESETS</div>
     <div class="backlight-control__container">
-      <SlidingStrips />
-      <CleanCenter />
-      <DiagonalStripes />
+      <btnBackgroundBars />
+      <btnBackgroundEdges />
+      <btnBackgroundLinear />
     </div>
   </div>
 </template>
@@ -19,10 +20,10 @@ import SlidingStrips from '@/assets/svg/backlight_control/slidingStrips.vue';
   &__container {
     z-index: 1000;
     position: absolute;
-        bottom: 8%;
-    left: calc(50% - 8.03rem);
-    width: 16.1rem;
-    height: 27px;
+    bottom: 0.53rem;
+    left: calc(50% - 8.1rem);
+    width: 16.2rem;
+    height: 1.68rem;
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -58,6 +59,17 @@ import SlidingStrips from '@/assets/svg/backlight_control/slidingStrips.vue';
       }
     }
   }
-}
 
+  &__description {
+       z-index: 1000;
+    position: absolute;
+    left: calc(50% - 4.3rem);
+    top: -36%;
+    width: max-content;
+    height: max-content;
+    color: #6a6a6a;
+    font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
 </style>

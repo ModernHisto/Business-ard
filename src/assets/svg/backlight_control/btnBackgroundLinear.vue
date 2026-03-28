@@ -1,5 +1,10 @@
+<script setup>
+import { useBackgroundStore } from '@/stores/background';
+const backgroundStore = useBackgroundStore();
+</script>
+
 <template>
-  <div class="svg-container">
+  <div class="svg-container" @click="(backgroundStore.current !== 'linear') ? backgroundStore.setBackground('linear') : backgroundStore.setBackground('none')">
     <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0.988 -0.01 1.837 0.87">
       <path
         d="M2.841 0 1.996.85.998.85.998 0 2.837 0"
@@ -13,9 +18,6 @@
     </svg>
   </div>
 </template>
-
-<script setup>
-</script>
 
 <style lang="scss">
 </style>
