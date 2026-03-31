@@ -1,5 +1,6 @@
 /* Colors */
 $black: #000000;
+$main-components: rgba(0, 0, 0, 0.09);
 $lightened-dark: #282828;
 $lightened-dark2: #292929;
 $white: #ffffff;
@@ -26,11 +27,5 @@ $lg: 1439px;
 $xl: 1919px;
 $xxl: 2560px;
 
-/* header */
-$header-lg-height: 3.3rem;
-
-
 /* Container */
 $container-max-width: 100%;
-
-/* @use "mixins"; */

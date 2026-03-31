@@ -2,12 +2,10 @@
 import googleSvg from '@/assets/svg/contact/google.vue';
 import telegramSvg from '@/assets/svg/contact/telegram.vue';
 import phoneSvg from '@/assets/svg/contact/phone.vue';
-
-
 </script>
 
 <template>
-  <footer class="footer glass-effect">
+  <footer class="footer">
     <div class="footer__content">
 
       <div class="footer__logo">
@@ -77,9 +75,13 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
 <style lang="scss">
 .footer {
   padding: 1.1rem 6rem;
-  background: linear-gradient(0deg, rgba(29, 29, 29, 0.493) 76%, rgba(29, 29, 29, 0.397) 100%);
+  background-color: $main-components;
   border-radius: 0rem !important;
   border-width: 1px 0 0 0 !important;
+  border-top: 1px solid $white1c;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0px 10px 7px -15px rgba(255, 255, 255, 0.54) inset;
 
   &__content {
     display: flex;
@@ -104,14 +106,13 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 0rem;
     border-bottom: 1px solid $white1c;
 
-    @include down($sm) {
+    @include down($md) {
       flex-direction: column;
-      gap: 2rem;
+      align-items: center;
     }
   }
 
@@ -119,7 +120,25 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem;
     gap: 1rem;
+
+    @include down($md) {
+      padding: 2rem 0;
+      width: max-content;
+    }
+  }
+
+  &__contact-item:nth-child(2) {
+    border-left: 1px solid $white1c;
+    border-right: 1px solid $white1c;
+
+    @include down($md) {
+      border-top: 1px solid $white1c;
+      border-bottom: 1px solid $white1c;
+      border-left: none;
+      border-right: none;
+    }
   }
 
   &__contact-icon {
@@ -139,18 +158,9 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
     letter-spacing: 0.03rem;
   }
 
-  /* &__contact-value {} */
-
   &__svg {
     width: 1.5rem;
     height: 1.5rem;
-
-    /*   &--telegram,
-    &--phone,
-    &--google,
-    &--github,
-    &--discord {}
-    */
   }
 
   &__signature {
@@ -159,7 +169,7 @@ import phoneSvg from '@/assets/svg/contact/phone.vue';
   }
 }
 
-@include down($sm) {
+@include down($md) {
   .footer {
     padding: 1rem 0.5rem;
 

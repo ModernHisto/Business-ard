@@ -3,7 +3,7 @@
     <div class="neon-glow"></div>
     <div class="neon-border"></div>
     <div class="icon">
-      <v-img src="/icon.jpg" width="100%" alt="icon" cover></v-img>
+      <v-img src="/icon.jpg" width="100%" height="100%" alt="icon" cover></v-img>
     </div>
   </div>
 </template>

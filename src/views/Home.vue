@@ -37,7 +37,7 @@ import mainButton from '@/components/reusable/buttons/MainButton.vue';
 <style lang="scss">
 .home {
   &__container {
-    padding-top: 10rem;
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -4,22 +4,7 @@
 
 body {
   color: variables.$white;
-  overflow: hidden;
-  background-color: variables.$black;
-  background-size: cover;
   line-height: 1.2;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 a {
@@ -43,7 +28,7 @@ a {
 .v-container {
   display: flex;
   justify-content: center;
-  padding: 4rem 4rem;
+  padding: 8rem 4rem 4rem 4rem;
 
   @include mixins.down(variables.$lg) {
     padding: 3rem 0.5rem;
@@ -52,11 +37,11 @@ a {
 
 .glass-effect {
   backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 5px 5px 7px -1px rgba(0, 0, 0, 0.192) !important;
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 5px 5px 7px -1px rgba(0, 0, 0, 0.192), inset 7px 7px 13px -18px rgba(255, 255, 255, 0.54) !important;
   border: 1px solid variables.$white1c;
   border-radius: 1rem;
-  background-color: transparent;
+  background-color: variables.$main-components;
 }
 
 .scroll-container {

@@ -25,11 +25,11 @@ const handleCopy = async (text) => {
 
 <template>
   <div class="svg-container" @click="handleCopy(copyText)">
-    <svg fill='currentColor' viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <title>discord</title>
-      <path
-        d="M20.992 20.163c-1.511-0.099-2.699-1.349-2.699-2.877 0-0.051 0.001-0.102 0.004-0.153l-0 0.007c-0.003-0.048-0.005-0.104-0.005-0.161 0-1.525 1.19-2.771 2.692-2.862l0.008-0c1.509 0.082 2.701 1.325 2.701 2.847 0 0.062-0.002 0.123-0.006 0.184l0-0.008c0.003 0.050 0.005 0.109 0.005 0.168 0 1.523-1.191 2.768-2.693 2.854l-0.008 0zM11.026 20.163c-1.511-0.099-2.699-1.349-2.699-2.877 0-0.051 0.001-0.102 0.004-0.153l-0 0.007c-0.003-0.048-0.005-0.104-0.005-0.161 0-1.525 1.19-2.771 2.692-2.862l0.008-0c1.509 0.082 2.701 1.325 2.701 2.847 0 0.062-0.002 0.123-0.006 0.184l0-0.008c0.003 0.048 0.005 0.104 0.005 0.161 0 1.525-1.19 2.771-2.692 2.862l-0.008 0zM26.393 6.465c-1.763-0.832-3.811-1.49-5.955-1.871l-0.149-0.022c-0.005-0.001-0.011-0.002-0.017-0.002-0.035 0-0.065 0.019-0.081 0.047l-0 0c-0.234 0.411-0.488 0.924-0.717 1.45l-0.043 0.111c-1.030-0.165-2.218-0.259-3.428-0.259s-2.398 0.094-3.557 0.275l0.129-0.017c-0.27-0.63-0.528-1.142-0.813-1.638l0.041 0.077c-0.017-0.029-0.048-0.047-0.083-0.047-0.005 0-0.011 0-0.016 0.001l0.001-0c-2.293 0.403-4.342 1.060-6.256 1.957l0.151-0.064c-0.017 0.007-0.031 0.019-0.040 0.034l-0 0c-2.854 4.041-4.562 9.069-4.562 14.496 0 0.907 0.048 1.802 0.141 2.684l-0.009-0.11c0.003 0.029 0.018 0.053 0.039 0.070l0 0c2.14 1.601 4.628 2.891 7.313 3.738l0.176 0.048c0.008 0.003 0.018 0.004 0.028 0.004 0.032 0 0.060-0.015 0.077-0.038l0-0c0.535-0.72 1.044-1.536 1.485-2.392l0.047-0.1c0.006-0.012 0.010-0.027 0.010-0.043 0-0.041-0.026-0.075-0.062-0.089l-0.001-0c-0.912-0.352-1.683-0.727-2.417-1.157l0.077 0.042c-0.029-0.017-0.048-0.048-0.048-0.083 0-0.031 0.015-0.059 0.038-0.076l0-0c0.157-0.118 0.315-0.24 0.465-0.364 0.016-0.013 0.037-0.021 0.059-0.021 0.014 0 0.027 0.003 0.038 0.008l-0.001-0c2.208 1.061 4.8 1.681 7.536 1.681s5.329-0.620 7.643-1.727l-0.107 0.046c0.012-0.006 0.025-0.009 0.040-0.009 0.022 0 0.043 0.008 0.059 0.021l-0-0c0.15 0.124 0.307 0.248 0.466 0.365 0.023 0.018 0.038 0.046 0.038 0.077 0 0.035-0.019 0.065-0.046 0.082l-0 0c-0.661 0.395-1.432 0.769-2.235 1.078l-0.105 0.036c-0.036 0.014-0.062 0.049-0.062 0.089 0 0.016 0.004 0.031 0.011 0.044l-0-0.001c0.501 0.96 1.009 1.775 1.571 2.548l-0.040-0.057c0.017 0.024 0.046 0.040 0.077 0.040 0.010 0 0.020-0.002 0.029-0.004l-0.001 0c2.865-0.892 5.358-2.182 7.566-3.832l-0.065 0.047c0.022-0.016 0.036-0.041 0.039-0.069l0-0c0.087-0.784 0.136-1.694 0.136-2.615 0-5.415-1.712-10.43-4.623-14.534l0.052 0.078c-0.008-0.016-0.022-0.029-0.038-0.036l-0-0z">
-      </path>
+    <svg viewBox="5 5 178 178" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"
+        d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10" />
+      <ellipse cx="71" cy="101" fill="currentColor" rx="13" ry="15" />
+      <ellipse cx="121" cy="101" fill="currentColor" rx="13" ry="15" />
     </svg>
 
     <div v-if="showNotification" class="notification">
@@ -49,8 +49,8 @@ const handleCopy = async (text) => {
 
 @include up($md) {
   .svg-container svg:hover {
-    filter: drop-shadow(0 0 1px $green);
-    color: $light-green;
+    filter: drop-shadow(0 0 0.5px $green);
+      color: $light-green;
   }
 }
 
@@ -61,15 +61,15 @@ const handleCopy = async (text) => {
 
 .notification {
   position: fixed;
-  top: 20px;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  
+
   background: linear-gradient(135deg,
-    rgba(26, 26, 26, 0.98) 0%,
-    rgba(34, 34, 34, 0.95) 50%,
-    rgba(26, 26, 26, 0.98) 100%);
-  
+      rgba(26, 26, 26, 0.98) 0%,
+      rgba(34, 34, 34, 0.95) 50%,
+      rgba(26, 26, 26, 0.98) 100%);
+
   color: $white;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -80,28 +80,26 @@ const handleCopy = async (text) => {
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
+  box-shadow:
     0 0 0 1px rgba(0, 255, 135, 0.1),
     0 4px 24px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  
+
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: 8px;
     padding: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 255, 135, 0.4),
-      transparent
-    );
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(0, 255, 135, 0.4),
+        transparent);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
-    mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -116,16 +114,19 @@ const handleCopy = async (text) => {
     transform: translateX(-50%) translateY(-30px);
     filter: blur(4px);
   }
+
   15% {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     filter: blur(0);
   }
+
   85% {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     filter: blur(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(-20px);
@@ -134,12 +135,15 @@ const handleCopy = async (text) => {
 }
 
 @keyframes borderGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0;
   }
-  10%, 80% {
+
+  10%,
+  80% {
     opacity: 1;
   }
 }
-
 </style>
