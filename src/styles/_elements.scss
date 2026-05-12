@@ -18,7 +18,7 @@ a {
   }
   
   @include mixins.up(variables.$md) {
-    &:hover {
+    &:hover, svg:hover {
       filter: drop-shadow(0 0 0.5px variables.$green);
       color: variables.$light-green;
     }

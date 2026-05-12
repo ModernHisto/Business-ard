@@ -94,8 +94,8 @@ for (let i = 0; i < 15; i++) {
 </script>
 
 <template>
-  <div class="test">
-    <div v-for="(bar, index) in gradientBars" :key="index" class="background__bars" :style="{
+  <div class="background-bars__wrapper"> <!-- Обёртка для работы Transition -->
+    <div v-for="(bar, index) in gradientBars" :key="index" class="background-bars" :style="{
       background: bar.background,
       width: bar.width,
       height: bar.height,
@@ -120,13 +120,13 @@ for (let i = 0; i < 15; i++) {
 </template>
 
 <style lang="scss" scoped>
-.test {
+.background-bars__wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.background__bars {
+.background-bars {
   position: absolute;
   transform-origin: center center;
   animation: background-bar-diagonalMove var(--bar-duration) linear infinite;
@@ -156,18 +156,6 @@ for (let i = 0; i < 15; i++) {
   }
 }
 
-@include down($md) {
-  .background__bars {
-    animation-duration: 10s;
-  }
-
-  .content {
-    font-size: 0.9rem;
-    backdrop-filter: blur(2px);
-  }
-}
-
-/* Дополнительный эффект пульсации яркости */
 @keyframes pulse {
 
   0%,
@@ -180,4 +168,14 @@ for (let i = 0; i < 15; i++) {
   }
 }
 
+@include down($md) {
+  .background-bars {
+    animation-duration: 10s;
+  }
+
+  .content {
+    font-size: 0.9rem;
+    backdrop-filter: blur(2px);
+  }
+}
 </style>

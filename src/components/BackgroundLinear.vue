@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <div class="background__linear-gradient"></div>
+  <div class="background-linear__gradient"></div>
 </template>
 
 <style lang="scss" scoped>
-.background__linear-gradient {
+.background-linear__gradient {
   position: absolute;
   left: 0;
   top: 0;

@@ -47,13 +47,6 @@ const handleCopy = async (text) => {
   position: relative;
 }
 
-@include up($md) {
-  .svg-container svg:hover {
-    filter: drop-shadow(0 0 0.5px $green);
-      color: $light-green;
-  }
-}
-
 .svg-container svg:active {
   filter: drop-shadow(0 0 1px $green);
   color: $green;

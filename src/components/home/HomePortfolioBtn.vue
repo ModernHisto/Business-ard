@@ -4,7 +4,7 @@ import arrow from '@/assets/svg/arrow.vue';
 
 <template>
   <router-link :to="{ name: 'portfolio' }">
-  <v-btn class="main-button" base-color="transparent">
+  <v-btn class="home-portfolio-btn" base-color="transparent">
     View works
     <arrow />
   </v-btn>
@@ -12,9 +12,9 @@ import arrow from '@/assets/svg/arrow.vue';
 </template>
 
 <style lang="scss">
-.main-button {
+.home-portfolio-btn {
   border: 1px solid $green;
-  border-radius: 60px;
+  border-radius: 5rem;
   padding: 1rem 2rem 2.5rem 2rem;
   text-transform: unset !important;
   font-size: 1rem;

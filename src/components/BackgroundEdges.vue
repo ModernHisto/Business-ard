@@ -1,137 +1,141 @@
 <script setup>
 </script>
 
-<template>
-  <div class="test">
-  <div class="background__edge-gradient background__edge-gradient--top"></div>
-  <div class="background__edge-gradient background__edge-gradient--right"></div>
-  <div class="background__edge-gradient background__edge-gradient--bottom"></div>
-  <div class="background__edge-gradient background__edge-gradient--left"></div>
+ <template>
+  <div class="background-edges__wrapper"> <!-- Обёртка для работы Transition -->
+    <div class="background-edges__edge background-edges__edge--top"></div>
+    <div class="background-edges__edge background-edges__edge--right"></div>
+    <div class="background-edges__edge background-edges__edge--bottom"></div>
+    <div class="background-edges__edge background-edges__edge--left"></div>
 
-  <div class="background__corner-gradient background__corner-gradient--top-left"></div>
-  <div class="background__corner-gradient background__corner-gradient--top-right"></div>
-  <div class="background__corner-gradient background__corner-gradient--bottom-left"></div>
-  <div class="background__corner-gradient background__corner-gradient--bottom-right"></div>
+    <div class="background-edges__corner background-edges__corner--top-left"></div>
+    <div class="background-edges__corner background-edges__corner--top-right"></div>
+    <div class="background-edges__corner background-edges__corner--bottom-left"></div>
+    <div class="background-edges__corner background-edges__corner--bottom-right"></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.test {position: absolute; width: 100%; height: 100%;}
+.background-edges__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-.background__edge-gradient,
-.background__corner-gradient {
+.background-edges__edge,
+.background-edges__corner {
   position: absolute;
   z-index: 0;
   pointer-events: none;
 }
 
-.background__edge-gradient--top {
+.background-edges__edge--top {
   top: 0;
   left: 0;
   right: 0;
   height: 40vh;
   background: radial-gradient(ellipse at 50% 0%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(117, 252, 173) 0%,
+      rgba(117, 252, 173, 0.486) 30%,
+      rgba(117, 252, 173, 0.11) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: topGlow 12s ease-in-out infinite alternate;
 }
 
-.background__edge-gradient--right {
+.background-edges__edge--right {
   top: 0;
   right: 0;
   bottom: 0;
   width: 40vw;
   background: radial-gradient(ellipse at 100% 50%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(117, 252, 173) 0%,
+      rgba(117, 252, 173, 0.486) 30%,
+      rgba(117, 252, 173, 0.11) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: rightGlow 10s ease-in-out infinite alternate;
 }
 
-.background__edge-gradient--bottom {
+.background-edges__edge--bottom {
   bottom: 0;
   left: 0;
   right: 0;
   height: 40vh;
   background: radial-gradient(ellipse at 50% 100%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(117, 252, 173) 0%,
+      rgba(117, 252, 173, 0.486) 30%,
+      rgba(117, 252, 173, 0.11) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: bottomGlow 14s ease-in-out infinite alternate;
 }
 
-.background__edge-gradient--left {
+.background-edges__edge--left {
   top: 0;
   left: 0;
   bottom: 0;
   width: 40vw;
   background: radial-gradient(ellipse at 0% 50%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(117, 252, 173) 0%,
+      rgba(117, 252, 173, 0.486) 30%,
+      rgba(117, 252, 173, 0.11) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: leftGlow 11s ease-in-out infinite alternate;
 }
 
-.background__corner-gradient--top-left {
+.background-edges__corner--top-left {
   top: 0;
   left: 0;
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 0% 0%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(0, 79, 182) 0%,
+      rgba(0, 79, 182, 0.473) 30%,
+      rgba(0, 79, 182, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerTL 16s ease-in-out infinite alternate;
 }
 
-.background__corner-gradient--top-right {
+.background-edges__corner--top-right {
   top: 0;
   right: 0;
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 100% 0%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(0, 79, 182) 0%,
+      rgba(0, 79, 182, 0.473) 30%,
+      rgba(0, 79, 182, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerTR 15s ease-in-out infinite alternate;
 }
 
-.background__corner-gradient--bottom-left {
+.background-edges__corner--bottom-left {
   bottom: 0;
   left: 0;
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 0% 100%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(0, 79, 182) 0%,
+      rgba(0, 79, 182, 0.473) 30%,
+      rgba(0, 79, 182, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerBL 13s ease-in-out infinite alternate;
 }
 
-.background__corner-gradient--bottom-right {
+.background-edges__corner--bottom-right {
   bottom: 0;
   right: 0;
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 100% 100%,
-      rgba(70, 200, 255, 0.7) 0%,
-      rgba(70, 200, 255, 0.3) 30%,
-      rgba(70, 200, 255, 0.1) 50%,
+      rgb(0, 79, 182) 0%,
+      rgba(0, 79, 182, 0.473) 30%,
+      rgba(0, 79, 182, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerBR 14s ease-in-out infinite alternate;
@@ -144,6 +148,7 @@
     filter: blur(2.81rem) brightness(0.8);
     transform: translateY(-5%);
   }
+
   100% {
     opacity: 0.8;
     filter: blur(60px) brightness(1.3);
@@ -157,6 +162,7 @@
     filter: blur(2.81rem) brightness(0.8);
     transform: translateX(5%);
   }
+
   100% {
     opacity: 0.8;
     filter: blur(60px) brightness(1.3);
@@ -170,6 +176,7 @@
     filter: blur(2.81rem) brightness(0.8);
     transform: translateY(5%);
   }
+
   100% {
     opacity: 0.8;
     filter: blur(60px) brightness(1.3);
@@ -183,6 +190,7 @@
     filter: blur(2.81rem) brightness(0.8);
     transform: translateX(-5%);
   }
+
   100% {
     opacity: 0.8;
     filter: blur(60px) brightness(1.3);
@@ -196,6 +204,7 @@
     filter: blur(40px) brightness(0.8);
     transform: scale(0.9) translate(-5%, -5%);
   }
+
   100% {
     opacity: 0.7;
     filter: blur(55px) brightness(1.4);
@@ -209,6 +218,7 @@
     filter: blur(40px) brightness(0.8);
     transform: scale(0.9) translate(5%, -5%);
   }
+
   100% {
     opacity: 0.7;
     filter: blur(55px) brightness(1.4);
@@ -222,6 +232,7 @@
     filter: blur(40px) brightness(0.8);
     transform: scale(0.9) translate(-5%, 5%);
   }
+
   100% {
     opacity: 0.7;
     filter: blur(55px) brightness(1.4);
@@ -235,6 +246,7 @@
     filter: blur(40px) brightness(0.8);
     transform: scale(0.9) translate(5%, 5%);
   }
+
   100% {
     opacity: 0.7;
     filter: blur(55px) brightness(1.4);
@@ -242,8 +254,9 @@
   }
 }
 
-/* Адаптивность (медиазапрос, если нужен) */
-@media (max-width: 1200px) {
+/* Адаптив */
+
+@include down($lg) {
   .background__edge-gradient {
     filter: blur(2.18rem);
   }

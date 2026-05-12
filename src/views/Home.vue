@@ -1,6 +1,6 @@
 <script setup>
 import icon from '@/components/home/Icon.vue'
-import mainButton from '@/components/reusable/buttons/MainButton.vue';
+import HomePortfolioBtn from '@/components/home/HomePortfolioBtn.vue';
 </script>
 
 <template>
@@ -22,7 +22,7 @@ import mainButton from '@/components/reusable/buttons/MainButton.vue';
 
             Welcome to my digital world.
           </p>
-          <main-button class="home__button" />
+          <HomePortfolioBtn class="home__button" />
         </div>
         <div class="home__icon">
           <a href="https://github.com/ModernHisto" target="_blank" rel="noopener noreferrer">

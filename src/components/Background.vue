@@ -46,9 +46,6 @@ onUnmounted(() => {
 
 <template>
   <div class="background">
-    <!-- <BackgroundBars v-if="backgroundStore.current === 'bars'" />
-    <BackgroundEdges v-if="backgroundStore.current === 'edges'" />
-    <BackgroundLinear v-if="backgroundStore.current === 'linear'" /> -->
 
     <Transition name="fade">
         <component :is="currentBackgroundComponent" :key="backgroundStore.current" />

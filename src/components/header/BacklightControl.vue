@@ -1,4 +1,8 @@
 <script setup>
+import { useBackgroundStore } from '@/stores/background';
+
+const backgroundStore = useBackgroundStore();
+
 import btnBackgroundEdges from '@/assets/svg/backlight_control/btnBackgroundEdges.vue';
 import btnBackgroundLinear from '@/assets/svg/backlight_control/btnBackgroundLinear.vue';
 import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.vue';
@@ -8,9 +12,14 @@ import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.
   <div class="backlight-control">
     <div class="backlight-control__description">BACKGROUND PRESETS</div>
     <div class="backlight-control__container">
-      <btnBackgroundBars />
-      <btnBackgroundEdges />
-      <btnBackgroundLinear />
+      <btnBackgroundBars :class="{ active: backgroundStore.current === 'bars' }"
+        @click="backgroundStore.setBackground('bars')" />
+        
+      <btnBackgroundEdges :class="{ active: backgroundStore.current === 'edges' }"
+        @click="backgroundStore.setBackground('edges')" />
+
+      <btnBackgroundLinear :class="{ active: backgroundStore.current === 'linear' }"
+        @click="backgroundStore.setBackground('linear')" />
     </div>
   </div>
 </template>
@@ -36,6 +45,14 @@ import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.
       width: max-content;
     }
 
+    .active {
+      svg {
+        path {
+          stroke: $green !important;
+        }
+      }
+    }
+
     @include up($md) {
       .svg-container:hover {
         filter: drop-shadow(0 0 1px $green);
@@ -46,7 +63,7 @@ import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.
     .svg-container:hover {
       svg {
         path {
-          stroke: $translucent-white !important;
+          stroke: $light-green;
         }
       }
     }
@@ -55,13 +72,12 @@ import btnBackgroundBars from '@/assets/svg/backlight_control/btnBackgroundBars.
       svg {
         filter: drop-shadow(0 0 1px $green);
         color: $green;
-        color: #b2fa883a;
       }
     }
   }
 
   &__description {
-       z-index: 1000;
+    z-index: 1000;
     position: absolute;
     left: calc(50% - 4.3rem);
     top: -36%;
