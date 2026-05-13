@@ -150,6 +150,10 @@ const toggleMenu = () => {
     }
   }
 
+  &__logo-link:hover {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) !important;
+  }
+
   &__nav {
     display: block;
     font-size: 1.1rem;

@@ -1,21 +1,32 @@
 @use './variables';
 @use './mixins';
 
-// Быстрое плавное появление, быстрое плавное скрытие - хорошо для роутинга страниц
-.route-enter-active,
-.route-leave-active {
-	transition: opacity 0.3s;
+/* Анимация перехода между страницами */
+.vertical-slide-enter-active,
+.vertical-slide-leave-active {
+  transition: all 0.5s ease;
 }
 
-.route-enter,
-.route-leave-to {
-	opacity: 0;
+/* Новая страница: появляется из нижней позиции */
+.vertical-slide-enter-from {
+  transform: translateY(100%);
+}
+.vertical-slide-enter-to {
+  transform: translateY(0);
 }
 
-/* Fade */
+/* Старая страница: уезжает вверх */
+.vertical-slide-leave-from {
+  transform: translateY(0);
+}
+.vertical-slide-leave-to {
+  transform: translateY(-100%);
+}
+
+/* Fade, анимация смены фона*/
 .fade-enter-active,
 .fade-leave-active {
-	transition: opacity 0.4s ease;
+	transition: opacity 0.8s ease;
 }
 
 .fade-enter-from,

@@ -9,7 +9,7 @@ import TheFooter from '@/layout/Footer.vue';
   <Background>
     <TheHeader />
     <router-view v-slot="{ Component }">
-      <transition name="route" mode="out-in">
+      <transition name="vertical-slide" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
