@@ -13,18 +13,22 @@ export default {
       text: "The soul of the modern frontend. I use it to bring a static page to life: implementing complex logic, dynamic content updates, asynchronous requests, and the interactivity that makes a web application truly responsive.",
     },
     4: {
-      title: "Vue.js",
+      title: "Vue.js (Composition API/Options API)",
       text: "A powerful and elegant interface building framework. It allows you to declaratively describe complex UIs by breaking them down into reusable, reactive components, speeding up development and making code predictable.",
     },
     5: {
+      title: "nuxt",
+      text: "A progressive framework for building user interfaces. It's a powerful tool for creating complex, interactive, and responsive web applications. It's a great choice for building large-scale, scalable, and maintainable projects.",
+    },
+    6: {
       title: "Pinia/Vuex",
       text: "State management tools in the Vue ecosystem provide a clear architecture for managing global application data, which is critical for keeping components in sync in large and complex projects.",
     },
-    6: {
+    7: {
       title: "BEM/SUIT",
       text: "CSS naming methodologies. This isn't just a code style, but a discipline that creates independent, understandable interface blocks. They prevent style conflicts, make code self-explanatory, and easily scalable across teams.",
     },
-    7: {
+    8: {
       title: "Libraries",
       text: "A huge arsenal of ready-made solutions (from Vuetify, Swiper.js, jQuery, vite-svg-loader and others). The ability to wisely select and integrate libraries allows you to avoid reinventing the wheel and focus on unique business logic, speeding up development and increasing reliability.",
     },
