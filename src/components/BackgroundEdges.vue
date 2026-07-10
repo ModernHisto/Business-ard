@@ -35,9 +35,9 @@
   right: 0;
   height: 40vh;
   background: radial-gradient(ellipse at 50% 0%,
-      rgb(117, 252, 173) 0%,
-      rgba(117, 252, 173, 0.486) 30%,
-      rgba(117, 252, 173, 0.11) 50%,
+      rgb(0, 204, 85) 0%,
+      rgba(0, 204, 85, 0.63) 30%,
+      rgba(0, 204, 85, 0.247) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: topGlow 12s ease-in-out infinite alternate;
@@ -49,9 +49,9 @@
   bottom: 0;
   width: 40vw;
   background: radial-gradient(ellipse at 100% 50%,
-      rgb(117, 252, 173) 0%,
-      rgba(117, 252, 173, 0.486) 30%,
-      rgba(117, 252, 173, 0.11) 50%,
+      rgb(0, 204, 85) 0%,
+      rgba(0, 204, 85, 0.63) 30%,
+      rgba(0, 204, 85, 0.247) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: rightGlow 10s ease-in-out infinite alternate;
@@ -63,9 +63,9 @@
   right: 0;
   height: 40vh;
   background: radial-gradient(ellipse at 50% 100%,
-      rgb(117, 252, 173) 0%,
-      rgba(117, 252, 173, 0.486) 30%,
-      rgba(117, 252, 173, 0.11) 50%,
+      rgb(0, 204, 85) 0%,
+      rgba(0, 204, 85, 0.63) 30%,
+      rgba(0, 204, 85, 0.247) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: bottomGlow 14s ease-in-out infinite alternate;
@@ -77,9 +77,9 @@
   bottom: 0;
   width: 40vw;
   background: radial-gradient(ellipse at 0% 50%,
-      rgb(117, 252, 173) 0%,
-      rgba(117, 252, 173, 0.486) 30%,
-      rgba(117, 252, 173, 0.11) 50%,
+      rgb(0, 204, 85) 0%,
+      rgba(0, 204, 85, 0.63) 30%,
+      rgba(0, 204, 85, 0.247) 50%,
       transparent 80%);
   filter: blur(3.12rem);
   animation: leftGlow 11s ease-in-out infinite alternate;
@@ -91,9 +91,9 @@
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 0% 0%,
-      rgb(0, 79, 182) 0%,
-      rgba(0, 79, 182, 0.473) 30%,
-      rgba(0, 79, 182, 0.089) 50%,
+      rgb(182, 0, 0) 0%,
+      rgba(182, 0, 0, 0.473) 30%,
+      rgba(182, 0, 0, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerTL 16s ease-in-out infinite alternate;
@@ -105,9 +105,9 @@
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 100% 0%,
-      rgb(0, 79, 182) 0%,
-      rgba(0, 79, 182, 0.473) 30%,
-      rgba(0, 79, 182, 0.089) 50%,
+      rgb(182, 0, 0) 0%,
+      rgba(182, 0, 0, 0.473) 30%,
+      rgba(182, 0, 0, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerTR 15s ease-in-out infinite alternate;
@@ -119,9 +119,9 @@
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 0% 100%,
-      rgb(0, 79, 182) 0%,
-      rgba(0, 79, 182, 0.473) 30%,
-      rgba(0, 79, 182, 0.089) 50%,
+      rgb(182, 0, 0) 0%,
+      rgba(182, 0, 0, 0.473) 30%,
+      rgba(182, 0, 0, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerBL 13s ease-in-out infinite alternate;
@@ -133,9 +133,9 @@
   width: 50vh;
   height: 50vh;
   background: radial-gradient(circle at 100% 100%,
-      rgb(0, 79, 182) 0%,
-      rgba(0, 79, 182, 0.473) 30%,
-      rgba(0, 79, 182, 0.089) 50%,
+      rgb(182, 0, 0) 0%,
+      rgba(182, 0, 0, 0.473) 30%,
+      rgba(182, 0, 0, 0.089) 50%,
       transparent 80%);
   filter: blur(2.81rem);
   animation: cornerBR 14s ease-in-out infinite alternate;

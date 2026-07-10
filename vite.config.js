@@ -6,7 +6,7 @@ import svgLoader from 'vite-svg-loader'
 import vuetify from 'vite-plugin-vuetify';
 
 export default defineConfig({
-   css: {
+  css: {
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler',
@@ -14,13 +14,13 @@ export default defineConfig({
       }
     }
   },
-  
+
   plugins: [
     vue(),
     svgLoader(),
     vuetify({
       autoImport: true,
-      styles: {configFile: 'src/styles/_vuetify-variables.scss'}
+      styles: { configFile: 'src/styles/_vuetify-variables.scss' }
     }),
   ],
   resolve: {
@@ -28,4 +28,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  base: 'https://ModernHisto.github.io/Business-ard/',
+  build: {
+    outDir: 'dist'
+  }
 })
